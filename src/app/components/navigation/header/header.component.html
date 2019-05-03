@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span><mat-icon>mood</mat-icon></span>
+
+  <button>Home</button>
+  <button>Profile</button>
+  <button>Quiz</button>
+  <button>Learning Module</button>
+
+  <button mat-icon-button [mat-menu-trigger-for]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item>Option 1</button>
+  <button mat-menu-item>Option 2</button>
+</mat-menu>
