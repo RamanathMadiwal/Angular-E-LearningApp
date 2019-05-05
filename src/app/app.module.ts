@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainComponent } from './components/main/main.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { QuizComponent } from './components/quiz/quiz.component';
@@ -31,7 +32,9 @@ import { DummytestComponent } from './dummytest/dummytest.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

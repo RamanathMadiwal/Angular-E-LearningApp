@@ -1,42 +1,95 @@
-<div class="mat-display-4">This is dipslay 4</div>
-<div class="mat-display-3">This is dipslay 3</div>
-<div class="mat-display-2">This is dipslay 3</div>
-<div class="mat-display-1">This is dipslay 1</div>
+<div class="card">
+  <div class="header">
+    <h1>Profile Image</h1>
+  </div>
 
-<div class="mat-headline">Headline</div>
-<div class="mat-title">Title</div>
-<div class="mat-subheading-2">Subheading 2</div>
-<div class="mat-subheading-1">Subheading 1</div>
-
-<div class="mat-body-1">Body 1</div>
-<div class="mat-body-2">Body 2</div>
-<div class="mat-caption">Caption</div>
-<div class="mat-typography">
-  <h1>H1</h1>
-  <h2>H2</h2>
-  <h3>H3</h3>
-  <h4>H4</h4>
-</div>
-<button mat-button>Basic</button>
-<button mat-flat-button>Flat</button>
-<button mat-raised-button color="warn">Raised</button>
-<button mat-stroked-button>Stroked</button>
-<button mat-icon-button>Icon</button>
-<button mat-fab>Fab</button>
-<button mat-mini-fab>Mini fab</button>
-
-<div>
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-    <button mat-raised-button color="warn" disableRipple>Warn</button>
-  </mat-card>
-
+  <div class="container">
+    <p>January 1, 2019</p>
+  </div>
   <span class="done">
     <button mat-fab>
       <mat-icon>check circle</mat-icon>
     </button>
   </span>
+</div>
+
+<div class="dummy">
+  <!-- <div class="mat-display-4">This is dipslay 4</div>
+  <div class="mat-display-3">This is dipslay 3</div>
+  <div class="mat-display-2">This is dipslay 3</div>
+  <div class="mat-display-1">This is dipslay 1</div>
+
+  <div class="mat-headline">Headline</div>
+  <div class="mat-title">Title</div>
+  <div class="mat-subheading-2">Subheading 2</div>
+  <div class="mat-subheading-1">Subheading 1</div>
+
+  <div class="mat-body-1">Body 1</div>
+  <div class="mat-body-2">Body 2</div>
+  <div class="mat-caption">Caption</div>
+  <div class="mat-typography">
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+  </div> -->
+  <button mat-button>Basic</button>
+  <button mat-flat-button>Flat</button>
+  <button mat-raised-button color="warn">Raised</button>
+  <button mat-stroked-button>Stroked</button>
+  <button mat-icon-button>Icon</button>
+  <button mat-fab>Fab</button>
+  <button mat-mini-fab>Mini fab</button>
+
+  <div>
+    <mat-card>
+      <button mat-button>All</button>
+      <button mat-raised-button>Of</button>
+      <button mat-raised-button color="primary">The</button>
+      <button mat-raised-button color="accent">Buttons</button>
+      <button mat-raised-button color="warn" disableRipple>Warn</button>
+    </mat-card>
+  </div>
+
+  <div>
+    <mat-button-toggle #toggleBtn>Toggle Button</mat-button-toggle>
+    <p>State of button:{{ toggleBtn.checked }}</p>
+    <mat-button-toggle #toggleBtnDisabled disabled
+      >DisabledToggle Button</mat-button-toggle
+    >
+  </div>
+  <div>
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+      <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+      <mat-button-toggle value="React">React</mat-button-toggle>
+      <mat-button-toggle value="Python">Python</mat-button-toggle>
+    </mat-button-toggle-group>
+    <p>The Toggled value is:{{ toggleGroup.value }}</p>
+  </div>
+  <mat-icon color="primary">mood</mat-icon>
+  <div>
+    <span matBadge="6" matBadgeSize="small">Notifications 1</span>
+    <span matBadge="6" matBadgeColor="accent">Notifications 2</span>
+    <span matBadge="6" matBadgeSize="large" matBadgeColor="warn"
+      >Notifications 3</span
+    >
+    <span matBadge="6" matBadgeSize="small" matBadgeOverlap="false"
+      >Notifications 4</span
+    >
+
+    <span [matBadge]="notification">Notifications Property Binding</span>
+    <span [matBadge]="notification" [matBadgeHidden]="notification === '1'"
+      >Notifications hidden</span
+    >
+  </div>
+  <div>
+    <mat-progress-spinner value="40"></mat-progress-spinner>
+
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <button (click)="loadData()">Start spinner</button>
+  </div>
+</div>
+
+<div class="darkmode">
+  <p>This is darkcontent</p>
 </div>

@@ -1,0 +1,28 @@
+.darkmode {
+  background-color: black;
+  background-image: linear-gradient(-90deg, red, green);
+  //background-image: linear-gradient(to bottom right, red, yellow);
+  //background-image: linear-gradient(to right, red , yellow);
+  //background-image: linear-gradient(red, yellow);
+
+  height: 50px;
+  width: 500px;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+div.container {
+  padding: 10px;
+}
