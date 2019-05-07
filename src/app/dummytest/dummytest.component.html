@@ -1,3 +1,41 @@
+
+<div>
+    <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+      <mat-tab label="Angular">Angular</mat-tab>
+      <mat-tab label="React">React</mat-tab>
+      <mat-tab label="Python">Python</mat-tab>
+    </mat-tab-group>
+    {{tabRef.selectedIndex}}
+  </div>
+<mat-horizontal-stepper>
+  <mat-step label="Shipping Address">Shipping Address Details
+    
+  </mat-step>
+  <mat-step label="Billing Address" optional>Billing Address Details
+      <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+  </mat-step>
+  <mat-step label="Place Order">Order Details</mat-step>
+</mat-horizontal-stepper>
+
+<div>
+  <h3>Strict stepwise stepper</h3>
+<mat-horizontal-stepper>
+    <mat-step label="Shipping Address" completed="false">Shipping Address Details
+      
+    </mat-step>
+    <mat-step label="Billing Address" completed="false">Billing Address Details
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+    </mat-step>
+    <mat-step label="Place Order">Order Details</mat-step>
+  </mat-horizontal-stepper>
+</div>
+
 <div class="card">
   <div class="header">
     <h1>Profile Image</h1>
@@ -12,6 +50,19 @@
     </button>
   </span>
 </div>
+
+<mat-card>
+<mat-card-title>
+  Card Title
+</mat-card-title>
+<mat-card-content>
+   This is card content
+</mat-card-content>
+<mat-card-actions align="end">
+  <button mat-stroked-button>Login</button>
+</mat-card-actions>
+</mat-card>
+
 
 <div class="dummy">
   <!-- <div class="mat-display-4">This is dipslay 4</div>
@@ -184,3 +235,4 @@
           </mat-expansion-panel>
     </mat-accordion>
 </div>
+

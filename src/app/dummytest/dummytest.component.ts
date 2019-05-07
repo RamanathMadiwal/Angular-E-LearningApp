@@ -19,4 +19,7 @@ export class DummytestComponent implements OnInit {
       this.showSpinner = false;
     }, 3000);
   }
+  logChange(index){
+    console.log(index)
+  }
 }
