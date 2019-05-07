@@ -19,6 +19,28 @@
   </mat-step>
   <mat-step label="Place Order">Order Details</mat-step>
 </mat-horizontal-stepper>
+<mat-vertical-stepper>
+    <mat-step label="Shipping Address">Shipping Address Details
+      
+    </mat-step>
+    <mat-step label="Billing Address" optional>Billing Address Details
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+    </mat-step>
+    <mat-step label="Place Order">Order Details</mat-step>
+  </mat-vertical-stepper>
+  <mat-form-field floatLabel="always" appearance="fill" color="primary">
+    <mat-label>Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">Min 5 Characters</mat-hint>
+  </mat-form-field>
+  <mat-form-field floatLabel="always" appearance="outline" color="primary">
+      <mat-label>Name</mat-label>
+      <input matInput required>
+      <mat-hint align="end">Min 5 Characters</mat-hint>
+    </mat-form-field>
 
 <div>
   <h3>Strict stepwise stepper</h3>
