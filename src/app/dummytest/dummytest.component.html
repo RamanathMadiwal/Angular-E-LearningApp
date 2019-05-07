@@ -93,3 +93,94 @@
 <div class="darkmode">
   <p>This is darkcontent</p>
 </div>
+<div>
+  <mat-list dense>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-list-item>Item 2</mat-list-item>
+  </mat-list>
+  <mat-nav-list>
+    <a mat-list-item href="#">Home</a>
+    <a mat-list-item href="#">About</a>
+  </mat-nav-list>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>home</mat-icon>
+      <h3 matLine>Heading One</h3>
+      <p matLine>Line 1</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Heading Two</h3>
+        <p matLine>Line 2</p>
+      </mat-list-item>
+  </mat-list>
+</div>
+<div>
+  <mat-grid-list cols="8" rowHeight="100px">
+    <mat-grid-tile rowspan="2"> Tile 1</mat-grid-tile>
+    <mat-grid-tile colspan="2"> Tile 2</mat-grid-tile>
+    <mat-grid-tile> Tile 3</mat-grid-tile>
+    <mat-grid-tile> Tile 4</mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="8" rowHeight="100px">
+      <mat-grid-tile> Tile 1</mat-grid-tile>
+      <mat-grid-tile colspan="2"> Tile 2</mat-grid-tile>
+      <mat-grid-tile> Tile 3</mat-grid-tile>
+      <mat-grid-tile> Tile 4</mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile > Tile 1</mat-grid-tile>
+        <mat-grid-tile > Tile 2</mat-grid-tile>
+        <mat-grid-tile> Tile 3</mat-grid-tile>
+        <mat-grid-tile> Tile 4</mat-grid-tile>
+      </mat-grid-list>
+      <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px">
+          <mat-grid-tile > Tile 1</mat-grid-tile>
+          <mat-grid-tile > Tile 2</mat-grid-tile>
+          <mat-grid-tile> Tile 3</mat-grid-tile>
+          <mat-grid-tile> Tile 4</mat-grid-tile>
+        </mat-grid-list> -->
+        <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px" gutterSize="10px">
+            <mat-grid-tile > Tile 1</mat-grid-tile>
+            <mat-grid-tile > Tile 2</mat-grid-tile>
+            <mat-grid-tile> Tile 3</mat-grid-tile>
+            <mat-grid-tile> Tile 4</mat-grid-tile>
+          </mat-grid-list>
+          -->
+</div>
+
+<div>
+  <mat-accordion multi=true>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+            Study Strategy
+          </mat-panel-title>
+          <mat-panel-description>
+            Total Duration: 3 Hours
+          </mat-panel-description>
+      </mat-expansion-panel-header>
+            <p>This is Strategy</p>
+            <mat-action-row>
+              <button mat-button>Enroll</button>
+            </mat-action-row>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                Study Strategy
+              </mat-panel-title>
+              <mat-panel-description>
+                Total Duration: 3 Hours
+              </mat-panel-description>
+          </mat-expansion-panel-header>
+                <p>This is Strategy</p>
+                <mat-action-row>
+                  <button mat-button>Enroll</button>
+                </mat-action-row>
+          </mat-expansion-panel>
+    </mat-accordion>
+</div>

@@ -10,7 +10,10 @@ import {
   MatBadgeModule,
   MatProgressSpinnerModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -23,7 +26,11 @@ const MaterialComponents = [
   MatBadgeModule,
   MatProgressSpinnerModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule
+  
 ];
 @NgModule({
   imports: [MaterialComponents],
