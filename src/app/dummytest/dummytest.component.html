@@ -1,63 +1,104 @@
-
 <div>
-    <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
-      <mat-tab label="Angular">Angular</mat-tab>
-      <mat-tab label="React">React</mat-tab>
-      <mat-tab label="Python">Python</mat-tab>
-    </mat-tab-group>
-    {{tabRef.selectedIndex}}
-  </div>
+  <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Angular">Angular</mat-tab>
+    <mat-tab label="React">React</mat-tab>
+    <mat-tab label="Python">Python</mat-tab>
+  </mat-tab-group>
+  {{ tabRef.selectedIndex }}
+</div>
 <mat-horizontal-stepper>
-  <mat-step label="Shipping Address">Shipping Address Details
-    
-  </mat-step>
-  <mat-step label="Billing Address" optional>Billing Address Details
-      <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
+  <mat-step label="Shipping Address">Shipping Address Details </mat-step>
+  <mat-step label="Billing Address" optional
+    >Billing Address Details
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
   </mat-step>
   <mat-step label="Place Order">Order Details</mat-step>
 </mat-horizontal-stepper>
 <mat-vertical-stepper>
-    <mat-step label="Shipping Address">Shipping Address Details
-      
-    </mat-step>
-    <mat-step label="Billing Address" optional>Billing Address Details
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-    </mat-step>
-    <mat-step label="Place Order">Order Details</mat-step>
-  </mat-vertical-stepper>
-  <mat-form-field floatLabel="always" appearance="fill" color="primary">
-    <mat-label>Name</mat-label>
-    <input matInput required>
-    <mat-hint align="end">Min 5 Characters</mat-hint>
-  </mat-form-field>
-  <mat-form-field floatLabel="always" appearance="outline" color="primary">
-      <mat-label>Name</mat-label>
-      <input matInput required>
-      <mat-hint align="end">Min 5 Characters</mat-hint>
-    </mat-form-field>
+  <mat-step label="Shipping Address">Shipping Address Details </mat-step>
+  <mat-step label="Billing Address" optional
+    >Billing Address Details
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Place Order">Order Details</mat-step>
+</mat-vertical-stepper>
+<mat-form-field floatLabel="always" appearance="fill" color="primary">
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align="end">Min 5 Characters</mat-hint>
+</mat-form-field>
+<mat-form-field floatLabel="always" appearance="outline" color="primary">
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align="end">Min 5 Characters</mat-hint>
+</mat-form-field>
 
 <div>
   <h3>Strict stepwise stepper</h3>
-<mat-horizontal-stepper>
-    <mat-step label="Shipping Address" completed="false">Shipping Address Details
-      
+  <mat-horizontal-stepper>
+    <mat-step label="Shipping Address" completed="false"
+      >Shipping Address Details
     </mat-step>
-    <mat-step label="Billing Address" completed="false">Billing Address Details
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
+    <mat-step label="Billing Address" completed="false"
+      >Billing Address Details
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
     </mat-step>
     <mat-step label="Place Order">Order Details</mat-step>
   </mat-horizontal-stepper>
 </div>
+<mat-form-field>
+  <mat-label>
+    Topic
+  </mat-label>
+  <mat-select [(value)]="selectedValue" multiple>
+    <mat-option>
+      None
+    </mat-option>
+    <mat-optgroup label="web">
+      <mat-option value="Angular">
+        Angular
+      </mat-option>
+      <mat-option value="React">
+        React
+      </mat-option>
+      <mat-option value="Python">
+        Python
+      </mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="mobile">
+      <mat-option value="Ionic">
+        Ionic
+      </mat-option>
+      <mat-option value="React Native">
+        React native
+      </mat-option>
+      <mat-option value="xamarin">
+        xamarin
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+<p>{{ selectedValue }}</p>
 
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto" />
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let option of optionsObject" [value]="option">
+        {{ option.name }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
 <div class="card">
   <div class="header">
     <h1>Profile Image</h1>
@@ -74,17 +115,16 @@
 </div>
 
 <mat-card>
-<mat-card-title>
-  Card Title
-</mat-card-title>
-<mat-card-content>
-   This is card content
-</mat-card-content>
-<mat-card-actions align="end">
-  <button mat-stroked-button>Login</button>
-</mat-card-actions>
+  <mat-card-title>
+    Card Title
+  </mat-card-title>
+  <mat-card-content>
+    This is card content
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-stroked-button>Login</button>
+  </mat-card-actions>
 </mat-card>
-
 
 <div class="dummy">
   <!-- <div class="mat-display-4">This is dipslay 4</div>
@@ -183,10 +223,10 @@
     </mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item>
-        <mat-icon matListIcon>folder</mat-icon>
-        <h3 matLine>Heading Two</h3>
-        <p matLine>Line 2</p>
-      </mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading Two</h3>
+      <p matLine>Line 2</p>
+    </mat-list-item>
   </mat-list>
 </div>
 <div>
@@ -197,26 +237,26 @@
     <mat-grid-tile> Tile 4</mat-grid-tile>
   </mat-grid-list>
   <mat-grid-list cols="8" rowHeight="100px">
-      <mat-grid-tile> Tile 1</mat-grid-tile>
-      <mat-grid-tile colspan="2"> Tile 2</mat-grid-tile>
-      <mat-grid-tile> Tile 3</mat-grid-tile>
-      <mat-grid-tile> Tile 4</mat-grid-tile>
-    </mat-grid-list>
+    <mat-grid-tile> Tile 1</mat-grid-tile>
+    <mat-grid-tile colspan="2"> Tile 2</mat-grid-tile>
+    <mat-grid-tile> Tile 3</mat-grid-tile>
+    <mat-grid-tile> Tile 4</mat-grid-tile>
+  </mat-grid-list>
 </div>
 <div>
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile > Tile 1</mat-grid-tile>
-        <mat-grid-tile > Tile 2</mat-grid-tile>
-        <mat-grid-tile> Tile 3</mat-grid-tile>
-        <mat-grid-tile> Tile 4</mat-grid-tile>
-      </mat-grid-list>
-      <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile> Tile 1</mat-grid-tile>
+    <mat-grid-tile> Tile 2</mat-grid-tile>
+    <mat-grid-tile> Tile 3</mat-grid-tile>
+    <mat-grid-tile> Tile 4</mat-grid-tile>
+  </mat-grid-list>
+  <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px">
           <mat-grid-tile > Tile 1</mat-grid-tile>
           <mat-grid-tile > Tile 2</mat-grid-tile>
           <mat-grid-tile> Tile 3</mat-grid-tile>
           <mat-grid-tile> Tile 4</mat-grid-tile>
         </mat-grid-list> -->
-        <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px" gutterSize="10px">
+  <!-- <mat-grid-list cols="2" rowHeight="fix" style="height: 200px" gutterSize="10px">
             <mat-grid-tile > Tile 1</mat-grid-tile>
             <mat-grid-tile > Tile 2</mat-grid-tile>
             <mat-grid-tile> Tile 3</mat-grid-tile>
@@ -226,35 +266,34 @@
 </div>
 
 <div>
-  <mat-accordion multi=true>
+  <mat-accordion multi="true">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-          <mat-panel-title>
-            Study Strategy
-          </mat-panel-title>
-          <mat-panel-description>
-            Total Duration: 3 Hours
-          </mat-panel-description>
+        <mat-panel-title>
+          Study Strategy
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration: 3 Hours
+        </mat-panel-description>
       </mat-expansion-panel-header>
-            <p>This is Strategy</p>
-            <mat-action-row>
-              <button mat-button>Enroll</button>
-            </mat-action-row>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-          <mat-expansion-panel-header>
-              <mat-panel-title>
-                Study Strategy
-              </mat-panel-title>
-              <mat-panel-description>
-                Total Duration: 3 Hours
-              </mat-panel-description>
-          </mat-expansion-panel-header>
-                <p>This is Strategy</p>
-                <mat-action-row>
-                  <button mat-button>Enroll</button>
-                </mat-action-row>
-          </mat-expansion-panel>
-    </mat-accordion>
+      <p>This is Strategy</p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Study Strategy
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration: 3 Hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is Strategy</p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
-
