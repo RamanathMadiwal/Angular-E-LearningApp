@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-dummytest',
@@ -12,10 +16,22 @@ export class DummytestComponent implements OnInit {
   selectedValue: string;
   options: string[] = ['Angular', 'React', 'Python'];
   optionsObject = [{ name: 'Angular' }, { name: 'React' }, { name: 'Python' }];
+  formsControl = new FormControl();
+  filteredOptions: Observable<string[]>;
   constructor() {}
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    this.filteredOptions = this.formsControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value))
+    );
+  }
+  private _filter(value: string): string[] {
+    const filterValue = value.toLocaleLowerCase();
+    return this.options.filter(option =>
+      option.toLocaleLowerCase().includes(filterValue)
+    );
+  }
   loadData() {
     this.showSpinner = true;
 

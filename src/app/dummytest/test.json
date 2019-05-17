@@ -1,0 +1,90 @@
+{
+  "Id": "f27eae77-f683-4b02-8e52-0c1882222d45",
+  "UserProfile": {
+    "StudentId": "312218",
+    "ExternalUserId": "312218",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "FullName": "First Name Last Name",
+    "EmailAddress": "0d852ad0-b6b0-4e39-a131-14da90ff55ec@ktp.io",
+    "ProductId": null,
+    "DateCreated": null,
+    "CurrentEnrollment": {
+      "Id": "312218",
+      "ExternalId": "312218",
+      "CourseAccessId": "312218",
+      "StartDate": null,
+      "EndDate": null,
+      "IsExpired": false,
+      "Product": {
+        "ProgramCode": "USMLST1",
+        "Code": "USMLPRE12",
+        "Title": null,
+        "ProductLine": "HEALTH",
+        "Business": "KTP"
+      },
+      "IsCurrentEnrollment": true,
+      "LastLoginDate": null,
+      "DateCreated": null,
+      "Extension": {
+        "ClassCode": "312218",
+        "ClassId": null,
+        "ClassStartDate": null,
+        "ClassEndDate": null,
+        "EventType": null,
+        "EventCode": null,
+        "EventStartDate": null,
+        "IsEventLiveOnline": null
+      },
+      "CourseId": "649a0298-6150-4501-bad8-7f1cc3e250ca",
+      "ClassStartDate": null
+    },
+    "Enrollments": [
+      {
+        "Id": "312218",
+        "ExternalId": "312218",
+        "CourseAccessId": "312218",
+        "StartDate": null,
+        "EndDate": null,
+        "IsExpired": false,
+        "Product": {
+          "ProgramCode": "USMLST1",
+          "Code": "USMLPRE12",
+          "Title": null,
+          "ProductLine": "HEALTH",
+          "Business": "KTP"
+        },
+        "IsCurrentEnrollment": true,
+        "LastLoginDate": null,
+        "DateCreated": null,
+        "Extension": {
+          "ClassCode": "312218",
+          "ClassId": null,
+          "ClassStartDate": null,
+          "ClassEndDate": null,
+          "EventType": null,
+          "EventCode": null,
+          "EventStartDate": null,
+          "IsEventLiveOnline": null
+        },
+        "CourseId": "649a0298-6150-4501-bad8-7f1cc3e250ca",
+        "ClassStartDate": null
+      }
+    ],
+    "Extensions": null
+  },
+  "LoginDate": "/Date(1558075134306)/",
+  "CourseId": null,
+  "GatewayToken": {
+    "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImF0b20ud2ViIiwidXNlciI6eyJpZCI6IjMxMjIxOCIsInN0dWRlbnRJZCI6IjMxMjIxOCIsInByb3ZpZGVyIjoiZ29vZ2xlIiwiZW1haWwiOiJzYW50b3NoLmt1bWFyMUBrYXBsYW4uY29tIiwiZmlyc3ROYW1lIjoiU2FudG9zaCIsImxhc3ROYW1lIjoiS3VtYXIifSwicmVzb3VyY2VzIjpbeyJ1cm4iOiJVU01MUFJFMTIiLCJpc0FjdGl2ZSI6dHJ1ZX0seyJ1cm4iOiIzMTIyMTgiLCJpc0FjdGl2ZSI6dHJ1ZX0seyJ1cm4iOiIzMTIyMTgiLCJpc0FjdGl2ZSI6dHJ1ZX1dLCJ0ZW5hbnQiOnsiaWQiOiJkZGQ1MjViOS1lNDdjLTQ2YWMtYWI1NS1lMGRiOTMzMzhmZjMiLCJuYW1lIjoia3RwIn0sImlhdCI6MTU1ODA3NTEzNCwiZXhwIjoxNTU4MjA0NzM0LCJpc3MiOiJnYXRld2F5In0.qDeC7Ty4wu6qYKTYdVH_onw5hcyR8n56v-mVqaMnJlE",
+    "HandshakeToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6ImF0b20ud2ViLnNoYXJlZCIsImV4cCI6MTU1ODA3NTQzMywiaWF0IjoxNTU4MDc1MTMzLCJqdGkiOiI3MzFiMWRlNjMwY2Q0ZTA1YmNiY2YwNWY4ZmNhYWIwZCJ9.S6nkrBWSRzCshMu0CBZLAlqui875KD5VkPxxzuEPYpA",
+    "Expiration": "/Date(1558204734000)/"
+  },
+  "OAuthToken": null,
+  "IsBackdoor": true,
+  "IsTrustedApplication": false,
+  "OverrideProductCode": null,
+  "OverrideProgramCode": null,
+  "LoginProvider": null,
+  "TrustedApplicationLoginPath": null
+}

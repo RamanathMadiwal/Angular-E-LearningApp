@@ -91,10 +91,18 @@
 
 <form>
   <mat-form-field>
-    <input type="text" matInput [matAutocomplete]="auto" />
+    <input
+      type="text"
+      matInput
+      [matAutocomplete]="auto"
+      [formControl]="formsControl"
+    />
     <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-      <mat-option *ngFor="let option of optionsObject" [value]="option">
-        {{ option.name }}
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
@@ -125,6 +133,10 @@
     <button mat-stroked-button>Login</button>
   </mat-card-actions>
 </mat-card>
+
+<mat-checkbox>
+  Subscribe
+</mat-checkbox>
 
 <div class="dummy">
   <!-- <div class="mat-display-4">This is dipslay 4</div>
