@@ -1,3 +1,24 @@
+<app-table-basic-example></app-table-basic-example>
+
+<div>
+  <button
+    mat-raised-button
+    matTooltip="Welcome To Code Evolution"
+    matTooltipPosition="after"
+    matTooltipShowDelay="0"
+    matTooltipHideDelay="2000"
+  >
+    Hello
+  </button>
+</div>
+<button mat-button (click)="openSnackBar('You are logged In', 'Dismiss')">
+  Open Snackbar
+</button>
+<button mat-raised-button (click)="openCustomSnackBar()">
+  Show custom snackbar
+</button>
+
+<button mat-raised-button (click)="openDialog()">Dialog</button>
 <div>
   <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
     <mat-tab label="Angular">Angular</mat-tab>
@@ -137,6 +158,50 @@
 <mat-checkbox>
   Subscribe
 </mat-checkbox>
+<br />
+
+<mat-checkbox labelPosition="before">
+  Done
+</mat-checkbox>
+<mat-divider> </mat-divider>
+<mat-radio-group>
+  <mat-radio-button value="Angular">
+    Angular
+  </mat-radio-button>
+  <mat-radio-button value="React">
+    React
+  </mat-radio-button>
+  <mat-radio-button value="Python">
+    Python
+  </mat-radio-button>
+</mat-radio-group>
+<br />
+<mat-form-field>
+  <input matInput [matDatepicker]="myDatePickerSimple" />
+  <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #myDatePickerSimple></mat-datepicker>
+</mat-form-field>
+<br />
+<mat-form-field>
+  <input
+    matInput
+    [matDatepicker]="myDatePickerRange"
+    [min]="minDate"
+    [max]="maxDate"
+  />
+  <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #myDatePickerRange></mat-datepicker>
+</mat-form-field>
+<br />
+<mat-form-field>
+  <input
+    matInput
+    [matDatepicker]="myDatePicker"
+    [matDatepickerFilter]="dateFilter"
+  />
+  <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker></mat-datepicker>
+</mat-form-field>
 
 <div class="dummy">
   <!-- <div class="mat-display-4">This is dipslay 4</div>

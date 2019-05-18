@@ -16,7 +16,11 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { LearningmoduleComponent } from './components/learningmodule/learningmodule.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { DummytestComponent } from './dummytest/dummytest.component';
-
+import { CustomSnackBarComponent } from './components/custom-snack-bar/custom-snack-bar.component';
+import { CustomDialogComponent } from './components/custom-dialog/custom-dialog.component';
+import { TableBasicExampleComponent } from './components/table-basic-example/table-basic-example.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { VirtualScrollingComponent } from './components/virtual-scrolling/virtual-scrolling.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,11 @@ import { DummytestComponent } from './dummytest/dummytest.component';
     QuizComponent,
     LearningmoduleComponent,
     HeaderComponent,
-    DummytestComponent
+    DummytestComponent,
+    CustomSnackBarComponent,
+    CustomDialogComponent,
+    TableBasicExampleComponent,
+    VirtualScrollingComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +43,11 @@ import { DummytestComponent } from './dummytest/dummytest.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CustomSnackBarComponent, CustomDialogComponent]
 })
 export class AppModule {}

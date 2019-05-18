@@ -20,7 +20,16 @@ import {
   MatInputModule,
   MatSelectModule,
   MatAutocompleteModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTooltipModule,
+  MatSnackBarModule,
+  MatDialogModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -43,7 +52,16 @@ const MaterialComponents = [
   MatInputModule,
   MatSelectModule,
   MatAutocompleteModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatTooltipModule,
+  MatSnackBarModule,
+  MatDialogModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
 ];
 @NgModule({
   imports: [MaterialComponents],

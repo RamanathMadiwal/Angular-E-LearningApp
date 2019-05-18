@@ -3,6 +3,9 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { from } from 'rxjs';
+import { MatSnackBar, MatDialog } from '@angular/material';
+import { CustomSnackBarComponent } from '../components/custom-snack-bar/custom-snack-bar.component';
+import { CustomDialogComponent } from '../components/custom-dialog/custom-dialog.component';
 
 @Component({
   selector: 'app-dummytest',
@@ -18,7 +21,9 @@ export class DummytestComponent implements OnInit {
   optionsObject = [{ name: 'Angular' }, { name: 'React' }, { name: 'Python' }];
   formsControl = new FormControl();
   filteredOptions: Observable<string[]>;
-  constructor() {}
+  minDate = new Date();
+  maxDate = new Date(2019, 3, 20);
+  constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.filteredOptions = this.formsControl.valueChanges.pipe(
@@ -45,5 +50,32 @@ export class DummytestComponent implements OnInit {
 
   displayFn(subject) {
     return subject ? subject.name : undefined;
+  }
+  dateFilter = date => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6;
+  };
+
+  openSnackBar(message, action) {
+    const snackBarRef = this.snackBar.open(message, action, { duration: 2000 });
+    snackBarRef.afterDismissed().subscribe(() => {
+      console.log('The snack bar was dismissed');
+    });
+    snackBarRef.onAction().subscribe(() => {
+      console.log('the snackbar action was triggered');
+    });
+  }
+  openCustomSnackBar() {
+    this.snackBar.openFromComponent(CustomSnackBarComponent, {
+      duration: 2000
+    });
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(CustomDialogComponent, {
+      data: { name: 'Bruce Wayne' }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog Result :${result}`);
+    });
   }
 }

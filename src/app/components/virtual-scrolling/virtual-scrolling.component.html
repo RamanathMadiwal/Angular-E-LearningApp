@@ -1,0 +1,8 @@
+<p>
+  virtual-scrolling works!
+</p>
+<cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <div *cdkVirtualFor="let number of members" class="number">
+    {{ number }}
+  </div>
+</cdk-virtual-scroll-viewport>
